@@ -1,5 +1,5 @@
 # l-h-01
-##Welcome to the DevOps course 
+## Welcome to the DevOps course 
 - Linux course
   - https://overthewire.org/wargames/bandit/
 - Oracle -VM
