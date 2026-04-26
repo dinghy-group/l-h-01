@@ -30,8 +30,6 @@ CMD ["python", "app.py"]
 # CMD ["python", "app.py"]
 
 # Runs when container starts
-
-
 # Build & Run
     # Build image
     #docker build -t my-python-app .
@@ -41,3 +39,18 @@ CMD ["python", "app.py"]
     #Output:
 
     #Hello from Docker!
+
+## EOF example
+
+```
+cat << EOF > ~/ns-my-first-pod.yaml 
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: test
+EOF
+
+```
+
+
+
