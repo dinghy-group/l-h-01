@@ -1,6 +1,13 @@
 # Installation of Docker Desktop 
 
 # Hands-On – Lab-01 - Getting Started with Docker
+
+# Cleanup
+```
+docker rm -f $(docker ps -a -q)
+docker rmi -f $(docker images -q)
+```
+
 **Installation:​**
   - Steps to install Docker on different platforms (Windows, macOS, Linux).​
   - Basic Commands:
