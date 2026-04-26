@@ -1,12 +1,5 @@
 # First Dockerfile
 
-#Simple Python app
-#structure
-#project/
- #├── app.py
- #└── Dockerfile
-#app.py
-print("Hello from Docker!")
 # Base image
 FROM python:3.12-alpine
 
