@@ -6,55 +6,26 @@
   - which including bash script with output **hello-world**
 
 
-### Build a new Image via Dockerfile base on nodejs and jenkins images
-
-- Create a app.js Application based of Node which running ​
-- res.end('Hello, World!\n');​
-- Wrap it with dockerfile​
-- Build an image​
-- Run the image​
-- Go to the app via the via the Browser​
-- Test the node version via interactive mode​
-- Tag, Push and verify the Image in Docker Hub
-
-### Solution: Build a new Image via Dockerfile base on nodejs and jenkins images
-
-- Download the Dockerfile
-- Build Time run the command below in order to create new local image
+## **Jenkins installation base on Docker image**
+- Work local server - PreRequsite is Docker desktop installed
 
 ```
-docker build -t jenkins-with-nodejs:1.0 .
-docker images
-docker images | awk '{print $1}'
+docker run -d --name jenkins -p 8080:8080 jenkins/jenkins
+  # See the logs in case its not work
+docker logs 13d3a0adddb1
+  # You should delete the docker container id of jenkins
+docker rm -f <container id>
+sudo curl ifconfig.me
 ```
+- Go to the browser and open a new tab http://host-ip:8080
+- in docker cli run the below command and insert to the jenkins password page
 
-- Run time run the command below in order to run the docker on backround
-
-```
-docker run -d --name jenkins -p 8080:8080 jenkins-with-nodejs:1.0
-docker ps
-```
-
-- Go the the browser and make sure the login page of Jenkins is running http://127.0.0.1:8080
-- Get jenkins password via command
-
-#### Fix Error via WSL
-- Open the cli of WSL and type the command below, it is not work with cli of Git Bash
+### Open the **cli of WSL** and type the command below, it is not work with cli of Git Bash
 
 ```
+  # from Git bash
+docker logs jenkins
+  # from WSL we can use cat command as well
 docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
-```
-
-#### Create First Admin User
-- Username = admin
-- Password = admin
-- Full name = admin
-- E-mail address = admin@admin
-- Go into Docker shell
-
-```
-docker run -it jenkins-with-nodejs:1.0 /bin/bash
-cd /usr/local/bin/
-node -v
 ```
 
