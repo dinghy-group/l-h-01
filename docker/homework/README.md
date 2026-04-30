@@ -29,3 +29,30 @@ docker logs jenkins
 docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
 ```
 
+## Hands-On– Lab-03-01 Dockerfile Dinner Suggestion
+- Run the app without dockerfile
+```
+py.exe app.py
+http://127.0.0.1:5000/
+```
+
+- Run the app with dockerfile
+
+```
+docker build -t dinner_flask_lh_app .
+docker images
+docker run -d -p 5099:5000 dinner_flask_lh_app
+http://localhost:5099/
+```
+
+- Docker tag, push and pull
+
+```
+docker images
+docker ps
+docker tag dinner_flask_lh_app dinghy123/dinner_flask_lh:latest
+docker push dinghy123/dinner_flask_lh:latest
+docker pull dinghy123/dinner_flask_lh:latest
+```
+
+
