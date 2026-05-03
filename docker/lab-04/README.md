@@ -87,9 +87,9 @@ http://localhost:5099/
 ```
 docker images
 docker ps
-docker tag dinner_flask_lh_app dinghy123/dinner_flask_lh:latest
-docker push dinghy123/dinner_flask_lh:latest
-docker pull dinghy123/dinner_flask_lh:latest
+docker tag dinner_flask_lh_app <username>/dinner_flask_lh:latest
+docker push <username>/dinner_flask_lh:latest
+docker pull <username>/dinner_flask_lh:latest
 ```
 
 
