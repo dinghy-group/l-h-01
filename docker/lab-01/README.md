@@ -40,17 +40,6 @@ CMD ["python", "app.py"]
 
     #Hello from Docker!
 
-## EOF example
-
-```
-cat << EOF > ~/ns-my-first-pod.yaml 
-apiVersion: v1
-kind: Namespace
-metadata:
-  name: test
-EOF
-
-```
 
 
 
