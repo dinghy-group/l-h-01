@@ -32,6 +32,7 @@ EOF
 ```
  ### other option is via yaml file
 ```
+kubectl get ns
 kubectl create ns ns-my-first-pod
 ```
 ### Create the first pod
