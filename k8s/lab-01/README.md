@@ -32,6 +32,7 @@ EOF
 ```
  ### Check namespace
 ```
+kubectl apply -f ns-my-first-pod.yaml
 kubectl config set-context --current --namespace=test
 kubectl get ns
 kind get clusters
