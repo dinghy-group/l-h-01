@@ -30,10 +30,13 @@ metadata:
 EOF
 
 ```
- ### other option is via yaml file
+ ### Check namespace
 ```
 kubectl get ns
-kubectl create ns ns-my-first-pod
+kind get clusters
+kubectl config get-contexts
+kubectl config get-contexts | awk '{print $1,$5}'
+
 ```
 ### Create the first pod
 ```
