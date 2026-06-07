@@ -32,6 +32,7 @@ EOF
 ```
  ### Check namespace
 ```
+kubectl config set-context --current --namespace=test
 kubectl get ns
 kind get clusters
 kubectl config get-contexts
