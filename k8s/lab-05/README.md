@@ -89,35 +89,3 @@ kubectl get deployments
 kubectl delete deployment example-deployment
 ```
 
-
-### TBD Check with strategy RollingUpdate maxSurge maxUnavailable
-
-```
-apiVersion: apps/v1
-kind: Deployment
-metadata:
-  name: example-deployment
-  labels:
-    app: example-app
-spec:
-  replicas: 3
-  strategy:
-    type: RollingUpdate
-    rollingUpdate:
-      maxSurge: 2
-      maxUnavailable: 0
-  selector:
-    matchLabels:
-      app: example-app
-  template:
-    metadata:
-      labels:
-        app: example-app
-    spec:
-      containers:
-      - name: example-container
-        image: nginx:latest
-        ports:
-        - containerPort: 80
-
-```
