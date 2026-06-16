@@ -1,6 +1,6 @@
 # Horizontal Pod Autoscaler (HPA)
 
-- CleanUp
+- CleanUp if needed
 - Apply Deployment
 - Install metrics-server
 - Check deployment metrics-server
