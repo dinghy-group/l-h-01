@@ -28,6 +28,7 @@ jobs:
           context: ./cicd/githubaction  # Path to the Dockerfile and build context
           push: true
           tags: |
-            dinghy123/app-node:${{ github.sha }}
+            dinghy123/app-node:${{ github.run_number }} # or dinghy123/app-node:${{ github.sha }}
+            dinghy123/app-node:latest
       - name: Logout from Docker Hub
         run: docker logout
