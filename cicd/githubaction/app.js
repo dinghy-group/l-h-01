@@ -7,7 +7,7 @@ const port = 3000;
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  res.end('my first github action 16062026 \n');
+  res.end('my first github action 16062026 fix the bug101 \n');
 });
 
 server.listen(port, hostname, () => {
