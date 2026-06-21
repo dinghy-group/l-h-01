@@ -1,0 +1,23 @@
+## **Jenkins installation base on Docker image**
+- Work local server - PreRequsite is Docker desktop installed
+
+```
+docker run -d --name jenkins -p 8080:8080 jenkins/jenkins
+  # See the logs in case its not work
+docker logs 13d3a0adddb1
+  # You should delete the docker container id of jenkins
+docker rm -f <container id>
+sudo curl ifconfig.me
+```
+- Go to the browser and open a new tab http://host-ip:8080
+- in docker cli run the below command and insert to the jenkins password page
+
+### Open the **cli of WSL** and type the command below, it is not work with cli of Git Bash
+
+```
+  # from Git bash
+docker logs jenkins
+  # from WSL we can use cat command as well
+docker exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+```
+
