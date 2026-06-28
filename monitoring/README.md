@@ -60,4 +60,6 @@ kubectl port-forward svc/prometheus-grafana 3000:80 -n monitoring​
 - Browser to grafana UI
 ```
 http://127.0.0.1:3000
+ # Generated the password
+kubectl get secret prometheus-grafana -n monitoring -o jsonpath="{.data.admin-password}" | base64 --decode
 ```
